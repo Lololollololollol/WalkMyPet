@@ -1,0 +1,16 @@
+
+            <form class="profile-form fade-me-in fade-me-out" action="/account/add_profile" method="POST">
+
+<!--?                <input type="image" class="form-control" name="profile_image" placeholder="Your profile image"/>-->
+                <input type="text" class="form-control" name="nickname" placeholder="Nick name" required/>
+                <input type="text" class="form-control" name="interests" placeholder="Your Interests" required/>
+                <input type="text" class="form-control" name="comments" placeholder="Comments"/>
+
+                <button class="btn btn-success" type="submit">Create</button>
+
+                <button class="btn btn-danger"
+                        hx-get="/account/cancel_add"
+                        hx-target=".profile-form"
+                        >Cancel</button>
+
+            </form>

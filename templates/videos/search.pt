@@ -1,0 +1,28 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <h1>Search Videos</h1>
+            <div class="container search-video">
+                <h2>
+                  Search Videos
+                  <span class="htmx-indicator">
+<!--?                    <img src="/img/bars.svg"/> Searching...-->
+                    Searching...
+                   </span>
+                </h2>
+                <input class="form-control" type="text"
+                       name="search_text" placeholder="Begin Typing To Search Videos..."
+                       hx-post="/videos/search"
+                       hx-trigger="keyup changed delay:500ms"
+                       hx-target="#search-results"
+                       hx-indicator=".htmx-indicator">
+
+                <div id="search-results">
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>

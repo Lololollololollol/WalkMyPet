@@ -1,0 +1,41 @@
+/* video.css */
+
+li {
+    display: inline-block;
+}
+.video-in-list{
+}
+
+.video-in-list ul {
+    margin-top:20px;
+}
+.video-in-list .video-title {
+    padding-top:10px;
+    margin-bottom: 5px;
+}
+
+.video-in-list img {
+    height: 150px;
+    float: top;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.video-title {
+    font-size: 25px;
+}
+
+.video-in-list .video-title {
+    font-size: 18px;
+}
+
+
+.search-video {
+    text-align: right;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+}
+

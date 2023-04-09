@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us" metal:define-macro="layout">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pyramid web application">
+    <meta name="author" content="Pylons Project">
+    <link rel="shortcut icon" href="${request.static_url('my_web_app:static/img/pyramid-16x16.png')}">
+
+    <title>Nomadism 21c</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/static/bower_components/bootstrap-css/css/bootstrap.min.css?cacheId=${view.build_cache_id('../static/bower_components/bootstrap-css/css/bootstrap.min.css')}" crossorigin="anonymous">
+
+    <!-- Custom Fonts (font awesome) -->
+    <link href="/static/bower_components/font-awesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1:wght@300;400;500;700;800&display=swap" rel="stylesheet"
+        rel="stylesheet"
+        type="text/css">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="${request.static_url('my_web_app:static/css/landing-page.css')}?cacheId=${view.build_cache_id('../static/css/landing-page.css')}" rel="stylesheet">
+    <link href="${request.static_url('my_web_app:static/css/theme.css')}?cacheId=${view.build_cache_id('../static/css/theme.css')}" rel="stylesheet">
+    <link href="${request.static_url('my_web_app:static/css/site.css')}?cacheId=${view.build_cache_id('../static/css/site.css')}" rel="stylesheet">
+    <link href="${request.static_url('my_web_app:static/css/nav.css')}?cacheId=${view.build_cache_id('../static/css/nav.css')}" rel="stylesheet">
+    <link href="${request.static_url('my_web_app:static/css/video.css')}?cacheId=${view.build_cache_id('../static/css/video.css')}" rel="stylesheet">
+
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/static/bower_components/html5shiv/dist/html5shiv.min.js?cacheId=${view.build_cache_id('../static/bower_components/html5shiv/dist/html5shiv.min.js')}" crossorigin="anonymous"></script>
+      <script src="/static/bower_components/respond/dest/respond.min.js?cacheId=${view.build_cache_id('../static/bower_components/respond/dest/respond.min.js')}" crossorigin="anonymous"></script>
+    <![endif]-->
+      <div metal:define-slot="additional_css"></div>
+  </head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="/static/img/logo.png"/> <span class="white-foreground">Nomadism</span> / <span
+                    class="grey-foreground">21c</span> In Test </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="/albums">albums</a>
+                    </li>
+                    <li>
+                        <a href="/home/inviteus">invite</a>
+                    </li>
+                    <li>
+                        <a href="/videos/index">videos</a>
+                    </li>
+                    <li>
+                        <a href="/home/contact">contact</a>
+                    </li>
+                    <li tal:condition="not view.logged_in_user_id">
+                        <a href="/account/signin">sign in</a>
+                    </li>
+                    <li tal:condition="not view.logged_in_user_id">
+                        <a href="/account/register">register</a>
+                    </li>
+                    <li tal:condition="view.logged_in_user_id">
+                        <a href="/account">your account</a>
+                    </li>>
+                    <li tal:condition="view.logged_in_user_id">
+                        <a href="account/logout">logout</a>
+                    </li>
+                    <li class="nav-item"><a class="navbar-link" href="/videos/search">🔍</a></li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<div class="main_content">
+   <div metal:define-slot="main_content"></div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-4 mission">
+                <div class="section-header">Our story</div>
+                This site will be launched in 2022.
+                <a href="">
+                    for Nomads</a>.<br>
+                <br>
+                Nomadism 2022 is currently built for a demo page.
+
+            </div>
+            <div class="col-md-3">
+                <div class="social">
+<!--?                    <div class="section-header">Connect with us</div>-->
+<!--?                    <div><a href="mailto:simon.persimmon@gmail.com" target="_blank"-->
+<!--?                    ><i class="fa fa-envelope"></i> email</a>-->
+<!--?                    </div>-->
+<!--?                    <div>-->
+<!--?
+                    target="_blank"><i class="fa fa-github"></i> github</a></div>-->
+<!--?                    <div><a href="https://twitter.com/TalkPython" target="_blank"><i class="fa fa-twitter"></i>-->
+<!--?                        twitter</a>-->
+<!--?                    </div>-->
+<!--?                    <div><a href="/home/image_credits" ><i-->
+<!--?                            class="fa fa-picture-o" aria-hidden="true"></i> credits</a></div>-->
+<!--?                    <div><a href="https://www.youtube.com/channel/UCKPSmMfDsXTKrCZApukcJ7A" target="_blank"><i-->
+<!--?                            class="fa fa-youtube"></i> youtube</a></div>-->
+
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+
+                <div class="copyright">
+                    Copyright &copy; 2021 <a href=""
+                                             target="_blank">Nomadism 21c</a>. All rights reserved.
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/bower_components/jquery/dist/jquery.js?cacheId=${view.build_cache_id('../static/bower_components/jquery/dist/jquery.js')}" crossorigin="anonymous"></script>
+<script src="/static/bower_components/bootstrap-css/js/bootstrap.js?cacheId=${view.build_cache_id('../static/bower_components/bootstrap-css/js/bootstrap.js')}" crossorigin="anonymous"></script>
+<div metal:define-slot="additional_js"></div>
+
+<!--?<script src="/static/js/htmx.min.js"></script>-->
+<script src="https://unpkg.com/htmx.org@1.6.0" integrity="sha384-G4dtlRlMBrk5fEiRXDsLjriPo8Qk5ZeHVVxS8KhX6D7I9XXJlNqbdvRlp9/glk5D" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

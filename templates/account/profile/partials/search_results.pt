@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th>title</th>
+        <th>author</th>
+        <th>view count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <a href="https://www.google.com">
+        <tr tal:repeat="vid search_results">
+            <td> <a href="https://www.youtube.com/watch?v=${vid.video_id}}">${ vid.video_title }</a></td>
+            <td>${ vid.video_author }</td>
+            <td>${ vid.view_count }</td>
+
+        </tr>
+    </a>
+    </tbody>
+</table>

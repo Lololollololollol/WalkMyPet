@@ -1,0 +1,17 @@
+
+            <form class="video-form fade-me-in fade-me-out" action="/videos/add_video" method="POST">
+
+                <input type="text" class="form-control" name="video_id" placeholder="YouTube ID" required/>
+                <input type="text" class="form-control" name="video_title" placeholder="Video title" required/>
+                <input type="text" class="form-control" name="video_author" placeholder="Video author" required/>
+                <input type="text" class="form-control" name="img_url" placeholder="Image URL" required/>
+                <input type="text" class="form-control" name="view_count" placeholder="View Count(Optional)"/>
+
+                <button class="btn btn-success" type="submit">Create</button>
+
+                <button class="btn btn-danger"
+                        hx-get="/videos/cancel_add"
+                        hx-target=".video-form"
+                        >Cancel</button>
+
+            </form>

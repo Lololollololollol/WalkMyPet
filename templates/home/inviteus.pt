@@ -1,0 +1,18 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <div class="container">
+            <div class="row upcoming">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h1>Invite us page</h1>
+                    <div style="padding-top: 50px;padding-bottom: 100px">
+                        Thanks for the interest in our journey. You can contact our members who inspire you to kick the load and meet the real-world.
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

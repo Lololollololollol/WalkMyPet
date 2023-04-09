@@ -1,0 +1,51 @@
+<div metal:use-macro="view.layout">
+    <div metal:fill-slot="main_content">
+
+        <h1>Videos</h1>
+
+
+            <div class="container">
+
+                <div class="video-in-list"  tal:repeat="vid videos">
+
+                    <div class="col-md-3">
+                        <div class="video-in-list img">
+
+                            <a href="https://www.youtube.com/watch?v=${vid.video_id}}">
+                            <img src="${vid.img_url}" alt="test"
+                                 title="${ vid.video_title }">
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            <div style="clear: both;"></div>
+            </div>
+
+
+
+
+
+        <section>
+            <div class="container add-video category">
+
+                <div class="row click-to-add">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+
+                    <a hx-get="/videos/add_video"
+                    hx-swap="outerHTML swap:.25s"
+                    class="fade-me-out">
+                        <i class="fas fa-plus-circle"> add a video </i></a>
+
+
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                </div>
+</section>
+
+
+        </div>
+    </div>
